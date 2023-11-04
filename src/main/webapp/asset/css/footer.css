@@ -1,0 +1,16 @@
+#footer {
+    border-top: 1px solid var(--border-color);
+    color: #fff;
+    padding: 20px 0;
+}
+
+#footer div {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer p {
+    text-align: center;
+}
