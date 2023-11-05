@@ -791,18 +791,21 @@ pre.code {
 }
 
 .features:last-child > .feature-box:last-child {
-    border-left: 20px solid #FFF; /* 2번째 자식에만 빨간색 실선 선 추가 */
+    border-left: 20px solid #FFF;
 }
 
 
 .sub-features div {
 	background-color: #f1f7ff;
-	transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .sub-features > div:hover {
-	background-color: #ffea4f;
+    background-color: #ffea4f;
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
+
 
 .feature-box h2 {
 	margin-top: 0px;
