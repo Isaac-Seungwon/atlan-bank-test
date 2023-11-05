@@ -28,8 +28,9 @@
     --sub-text-color: #777;
     --back-color: #f1f7ff;
     --header-color: #444;
-    --primary-color: #DEDEDE;
-    --secondary-color: #EFEFEF;
+    --primary-color: #f1f7ff;
+    --secondary-color: #dfe7f1;
+    --button-hover-color: #ffea4f;
     --default-width: 1000px;
     --narrow-width: 500px;
     --wide-width: 1200px;
@@ -190,7 +191,7 @@ input,
 select,
 textarea {
     border: 1px solid #bbb;
-    border-radius: 3px;
+    border-radius: 1px;
     outline: 0;
     resize: none;
     padding: 7px;
@@ -277,13 +278,13 @@ input[type=submit].primary {
 button.primary:hover,
 input[type=button].primary:hover,
 input[type=submit].primary:hover {
-    background-color: var(--secondary-color)
+    background-color: var(--button-hover-color)
 }
 
 button:hover,
 input[type=button]:hover,
 input[type=submit]:hover {
-    background-color: var(--primary-color)
+    background-color: var(--button-hover-color)
 }
 
 button {
@@ -796,12 +797,12 @@ pre.code {
 
 
 .sub-features div {
-	background-color: #f1f7ff;
+    background-color: var(--back-color);
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .sub-features > div:hover {
-    background-color: #ffea4f;
+    background-color: var(--button-hover-color);
     transform: scale(1.05);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }

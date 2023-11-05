@@ -7,13 +7,55 @@
 <meta charset="UTF-8">
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
 <style>
+	#form-list {
+		display: flex;
+	}
+	#form-list form {
+		margin-right: 5px;
+	}
 </style>
 </head>
 <body>
 	<%@ include file="/WEB-INF/views/inc/header.jsp"%>
 	<main id="main">
-		<h1>제목 <small>부제</small></h1>
-		내용
+		<h1>회원 <small>로그인</small></h1>
+		
+		<form method="POST" action="/atlanbank/user/login.do">
+		<table class="vertical">
+			<tr>
+				<th>아이디</th>
+				<td><input type="text" name="id" id="id" required class="short"></td>
+			</tr>
+			<tr>
+				<th>암호</th>
+				<td><input type="password" name="pw" id="pw" required class="short"></td>
+			</tr>
+		</table>
+		<div>
+			<button type="button" class="back" onclick="location.href='/atlanbank/index.do';">돌아가기</button>
+			<button type="submit" class="login primary">로그인</button>
+			<button type="button" class="add primary" onclick="location.href='/atlanbank/user/register.do';">회원가입</button>
+		</div>
+		</form>
+		
+		<hr>
+		<div id="form-list">
+			<form method="POST" action="/atlanbank/user/login.do">
+				<input type="hidden" name="id" value="isaac">
+				<input type="hidden" name="pw" value="1111">
+				<button type="submit" class="login primary">아이작</button>
+			</form>
+			<form method="POST" action="/atlanbank/user/login.do">
+				<input type="hidden" name="id" value="sopia">
+				<input type="hidden" name="pw" value="1111">
+				<button type="submit" class="login primary">소피아</button>
+			</form>
+			<form method="POST" action="/atlanbank/user/login.do">
+				<input type="hidden" name="id" value="admin">
+				<input type="hidden" name="pw" value="1111">
+				<button type="submit" class="login primary">관리자</button>
+			</form>
+		</div>
 	</main>
 	<%@ include file="/WEB-INF/views/inc/footer.jsp"%>
 

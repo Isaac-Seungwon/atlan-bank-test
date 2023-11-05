@@ -12,8 +12,13 @@
 <body>
 	<%@ include file="/WEB-INF/views/inc/header.jsp"%>
 	<main id="main">
-		<h1>제목 <small>부제</small></h1>
-		내용
+		<h1>회원 <small>탈퇴</small></h1>
+		<form method="POST" action="/atlanbank/user/unregister.do">
+			<div>
+				<button type="button" class="back" onclick="location.href='/atlanbank/user/info.do';">돌아가기</button>
+				<button type="submit" class="out primary">탈퇴하기</button>
+			</div>
+		</form>
 	</main>
 	<%@ include file="/WEB-INF/views/inc/footer.jsp"%>
 
