@@ -24,11 +24,11 @@
 		<table class="vertical">
 			<tr>
 				<th>아이디</th>
-				<td><input type="text" name="id" id="id" required class="short"></td>
+				<td><input type="text" name="id" id="id" required class="middle"></td>
 			</tr>
 			<tr>
 				<th>암호</th>
-				<td><input type="password" name="pw" id="pw" required class="short"></td>
+				<td><input type="password" name="pw" id="pw" required class="middle"></td>
 			</tr>
 		</table>
 		<div>
@@ -39,6 +39,7 @@
 		</form>
 		
 		<hr>
+		<h2>자동 로그인</h2>
 		<div id="form-list">
 			<form method="POST" action="/atlanbank/user/login.do">
 				<input type="hidden" name="id" value="isaac">

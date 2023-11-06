@@ -2,6 +2,6 @@
 
 <footer id="footer">
     <div>
-        <p>&copy;Copyright Isaac Atlan Bank All Rights Reserved.</p>
+        <p>&copy;Copyright Atlan Bank All Rights Reserved.</p>
     </div>
 </footer>
