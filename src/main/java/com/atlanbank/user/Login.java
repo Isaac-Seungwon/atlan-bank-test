@@ -41,8 +41,13 @@ public class Login extends HttpServlet {
 			req.getSession().setAttribute("id", id);
 			req.getSession().setAttribute("name", result.getName());
 			req.getSession().setAttribute("lv", result.getLv());
-
-			resp.sendRedirect("/atlanbank/index.do");
+			
+			//등급 확인(일반: index.do, 관리자: admin/adminpage.do)
+			if (result.getLv().equalsIgnoreCase("2")) {
+				resp.sendRedirect("/atlanbank/admin/adminpage.do");
+			} else {
+				resp.sendRedirect("/atlanbank/index.do");
+			}
 
 		} else {
 			// 로그인 실패
